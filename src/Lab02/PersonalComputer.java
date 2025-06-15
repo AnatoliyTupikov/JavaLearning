@@ -4,15 +4,15 @@ package Lab02;
 
 public class PersonalComputer {
 
-    public Processors CPU;
+    private Processor CPU;
     public String GPU;
     public int FansCount;
     public  String Motherboard;
     public  String CaseColor;
 
-    PersonalComputer(){}
+    public PersonalComputer(){}
 
-    PersonalComputer(Processors cpu, String motherboard, String gpu, int fans, String color)
+    public PersonalComputer(Processor cpu, String motherboard, String gpu, int fans, String color)
     {
         CPU = cpu;
         Motherboard = motherboard;
@@ -20,4 +20,16 @@ public class PersonalComputer {
         FansCount = fans;
         CaseColor = color;
     }
+
+    public Processor getProcessor()
+    {
+        return this.CPU;
+    }
+
+    public void setProcessor(Processor value)
+    {
+        this.CPU = value;
+    }
+
+
 }
