@@ -10,8 +10,8 @@ public class Main {
         int iresult = 29 * 4 * (-15);
         System.out.println(dresult + " " + iresult);
 
-        int number = 10500;
-        double result = (double) (number / 10) / 10;
+        double number = 10500;
+        double result = (number / 10) / 10;
         System.out.println(result);
 
         result = 3.6 * 4.1 * 5.9;
