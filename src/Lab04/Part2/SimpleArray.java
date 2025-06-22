@@ -53,17 +53,17 @@ public class SimpleArray {
         System.out.println("Array 2: " + arrStr(arr));
     }
 
-    public static void firstUniq(int... arr){
-        for (int i = 0; i < arr.length; i++){
+    public static void firstUniq(int... arr) {
+        for (int i = 0; i < arr.length; i++) {
             var el = arr[i];
             boolean isBreaked = false;
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] == el){
+                if (arr[j] == el) {
                     isBreaked = true;
                     break;
                 }
             }
-            if (!isBreaked){
+            if (!isBreaked) {
                 System.out.println("Array: " + arrStr(arr));
                 System.out.println("The first unique value: " + arr[i]);
                 return;
@@ -71,8 +71,8 @@ public class SimpleArray {
         }
     }
 
-    private static int[] mergeSort(int[] arr){
-        if (arr.length <=1) return arr;
+    private static int[] mergeSort(int[] arr) {
+        if (arr.length <= 1) return arr;
 
         int[] left = mergeSort(Arrays.copyOfRange(arr, 0, arr.length / 2));
         int[] right = mergeSort(Arrays.copyOfRange(arr, arr.length / 2, arr.length));
@@ -81,30 +81,29 @@ public class SimpleArray {
         int rightI = 0;
         int r = 0;
 
-        while (leftI < left.length && rightI < right.length){
+        while (leftI < left.length && rightI < right.length) {
             var leftValue = left[leftI];
             var rightValue = right[rightI];
 
-            if(leftValue <= rightValue) {
+            if (leftValue <= rightValue) {
                 arr[r] = leftValue;
                 r++;
                 leftI++;
-            }
-            else {
+            } else {
                 arr[r] = rightValue;
                 r++;
                 rightI++;
             }
         }
 
-        while (leftI < left.length){
+        while (leftI < left.length) {
             var leftValue = left[leftI];
             arr[r] = leftValue;
             r++;
             leftI++;
         }
 
-        while (rightI < right.length){
+        while (rightI < right.length) {
             var rightValue = right[rightI];
             arr[r] = rightValue;
             r++;
@@ -114,9 +113,9 @@ public class SimpleArray {
         return arr;
     }
 
-    public static void randomArr(int length){
+    public static void randomArr(int length) {
         int[] arr = new int[length];
-        for (int i = 0; i < length; i++){
+        for (int i = 0; i < length; i++) {
             arr[i] = ThreadLocalRandom.current().nextInt(-10, 11);
         }
         System.out.println("Array: " + arrStr(arr));
